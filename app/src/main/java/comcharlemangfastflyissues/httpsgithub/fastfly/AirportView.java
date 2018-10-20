@@ -18,6 +18,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class AirportView extends FragmentActivity implements OnMapReadyCallback {
@@ -52,21 +53,27 @@ public class AirportView extends FragmentActivity implements OnMapReadyCallback 
         mMap = googleMap;
 
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-        ActivityCompat.requestPermissions(this,
-                new String[] {Manifest.permission.ACCESS_FINE_LOCATION}, LOCATION_PERMISSION_CODE);
-        if(ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION)
-                != PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
+
+        if(ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED)
-            return;
+            ActivityCompat.requestPermissions(this,
+                    new String[] {Manifest.permission.ACCESS_FINE_LOCATION}, LOCATION_PERMISSION_CODE);
 
         Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
         double longitude = location.getLongitude();
         double latitude = location.getLatitude();
 
-        LatLng currLoc = new LatLng(latitude, longitude);
+        LatLngBounds ATLAirport = new LatLngBounds(new LatLng(33.637194, -84.446728), new LatLng(33.644034,-84.417289));
+        LatLng loc = new LatLng(33.640775, -84.433333);
+        mMap.addMarker(new MarkerOptions().position(loc).title("Current Location"));
+        mMap.setMinZoomPreference(17);
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(loc, 19));
+        mMap.setLatLngBoundsForCameraTarget(ATLAirport);
+
+        /*LatLng currLoc = new LatLng(latitude, longitude);
 
         mMap.addMarker(new MarkerOptions().position(currLoc).title("Current Location"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(currLoc));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(currLoc, 20));*/
 
         // Add a marker in Sydney and move the camera
         /*LatLng sydney = new LatLng(-34, 151);
