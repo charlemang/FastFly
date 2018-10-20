@@ -6,6 +6,6 @@
     <string name="title_fly">FLY</string>
     <string name="edit_message">Enter a message</string>
     <string name="button_send">Send</string>
-    <string name="enter_airport">Enter Airport:</string>
-    <string name="title_activity_airport_view">Map</string>
+    <string name="enter_airport">Enter Airport name:</string>
+    <string name="title_activity_airport_view"> </string>
 </resources>
