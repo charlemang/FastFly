@@ -8,6 +8,7 @@
     tools:context=".MainScreen">
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="250dp"
@@ -38,24 +39,10 @@
             app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
         <EditText
-            android:id="@+id/editText2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:autofillHints="password"
-            android:ems="10"
-            android:fontFamily="@font/avenir"
-            android:inputType="textPersonName"
-            android:singleLine="false"
-            android:textStyle="italic"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-            tools:textColor="@android:color/darker_gray" />
+            android:id="@+id/editTextEnterPassword"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/edittext_bottom_line" />
     </LinearLayout>
 
     <LinearLayout
@@ -117,5 +104,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/fastfly0_blue_smaller" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="75dp"
+        android:background="@drawable/transparent_bg_bordered_button"
+        android:text="@string/button_send"
+        android:textColor="@color/colorText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
 </android.support.constraint.ConstraintLayout>
