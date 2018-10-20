@@ -28,11 +28,12 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="128dp"
+        android:autofillHints="password"
+        android:onClick="sendAirport"
         android:text="@string/button_send"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/editText2"
-        android:autofillHints="password" />
+        app:layout_constraintStart_toEndOf="@+id/editText2" />
 
 </android.support.constraint.ConstraintLayout>
