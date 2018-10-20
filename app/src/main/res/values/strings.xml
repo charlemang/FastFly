@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name"> </string>
     <string name="title_name">FAST</string>
+    <string name="gate_name">Enter gate name: </string>
+    <string name="flight_time">Flight departure time: </string>
     <string name="title_fly">FLY</string>
     <string name="edit_message">Enter a message</string>
     <string name="button_send">Send</string>
