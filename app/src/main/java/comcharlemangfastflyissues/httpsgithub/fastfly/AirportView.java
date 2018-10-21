@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.location.Location;
 import android.location.LocationManager;
 import android.support.v4.app.ActivityCompat;
@@ -79,11 +80,20 @@ public class AirportView extends FragmentActivity implements OnMapReadyCallback 
         double latitude = location.getLatitude();
 
         LatLng center; // = new LatLng(33.640775, -84.433333);
-        Polyline line = mMap.addPolyline(new PolylineOptions().add(new LatLng(latitude, longitude) ))
+        Polyline polyline;
+        double topLong = -84.435926;
+        double bottomLong = -84.435818;
 
         switch(terminal) {
             case 'A':
                 center = new LatLng(33.6408608, -84.4391428);
+                polyline = mMap.addPolyline(new PolylineOptions()
+                        .add(new LatLng(center.latitude, topLong),
+                                new LatLng(center.latitude, bottomLong))
+                        .width(5)
+                        .color(Color.RED));
+                        //.visible(false));
+
 
             case 'B':
                 center = new LatLng(33.64071, -84.43591);
@@ -100,11 +110,11 @@ public class AirportView extends FragmentActivity implements OnMapReadyCallback 
 
 
 
-        LatLngBounds ATLAirport = new LatLngBounds(new LatLng(33.637194, -84.446728), new LatLng(33.644034,-84.417289));
+        /*LatLngBounds ATLAirport = new LatLngBounds(new LatLng(33.637194, -84.446728), new LatLng(33.644034,-84.417289));
         mMap.addMarker(new MarkerOptions().position(loc).title("Current Location"));
         mMap.setMinZoomPreference(17);
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(loc, 19));
-        mMap.setLatLngBoundsForCameraTarget(ATLAirport);
+        mMap.setLatLngBoundsForCameraTarget(ATLAirport);*/
 
         /*LatLng currLoc = new LatLng(latitude, longitude);
 
