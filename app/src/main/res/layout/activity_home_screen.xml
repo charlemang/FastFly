@@ -42,10 +42,12 @@
         <EditText
             android:id="@+id/departure_time"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:background="@drawable/edittext_bottom_line"
             android:ems="10"
+            android:fontFamily="@font/avenir"
             android:inputType="time"
+            android:textColor="@color/colorText"
             tools:layout_editor_absoluteX="98dp"
             tools:layout_editor_absoluteY="32dp" />
 
@@ -86,14 +88,16 @@
             android:id="@+id/gate_name"
             android:layout_width="fill_parent"
             android:layout_height="40dp"
-            android:background="@drawable/edittext_bottom_line" />
+            android:background="@drawable/edittext_bottom_line"
+            android:fontFamily="@font/avenir"
+            android:textColor="@color/colorText" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="11dp"
         android:layout_marginBottom="100dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -22,7 +22,7 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="214dp"
+            android:layout_width="299dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
@@ -43,14 +43,16 @@
             android:id="@+id/airport_name"
             android:layout_width="fill_parent"
             android:layout_height="40dp"
-            android:background="@drawable/edittext_bottom_line" />
+            android:background="@drawable/edittext_bottom_line"
+            android:fontFamily="@font/avenir"
+            android:textColor="@color/colorText" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="11dp"
         android:layout_marginBottom="100dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -77,7 +79,7 @@
 
         <TextView
             android:id="@+id/textView4"
-            android:layout_width="58dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="64dp"
             android:layout_marginEnd="124dp"
