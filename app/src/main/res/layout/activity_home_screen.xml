@@ -155,6 +155,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
         android:background="@drawable/transparent_bg_bordered_button"
+        android:onClick="getGateAndTime"
         android:text="@string/button_send"
         android:textColor="@color/colorText"
         app:layout_constraintBottom_toBottomOf="parent"

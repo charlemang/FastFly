@@ -77,7 +77,7 @@
 
         <TextView
             android:id="@+id/textView4"
-            android:layout_width="wrap_content"
+            android:layout_width="58dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="64dp"
             android:layout_marginEnd="124dp"
@@ -112,6 +112,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="100dp"
         android:background="@drawable/transparent_bg_bordered_button"
+        android:onClick="sendAirport"
         android:text="@string/button_send"
         android:textColor="@color/colorText"
         app:layout_constraintBottom_toBottomOf="parent"
