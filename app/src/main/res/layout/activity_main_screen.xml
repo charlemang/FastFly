@@ -41,10 +41,12 @@
 
         <EditText
             android:id="@+id/airport_name"
+            android:maxLength="3"
             android:layout_width="fill_parent"
             android:layout_height="40dp"
             android:background="@drawable/edittext_bottom_line"
             android:fontFamily="@font/avenir"
+            android:inputType="textCapCharacters"
             android:textColor="@color/colorText" />
     </LinearLayout>
 

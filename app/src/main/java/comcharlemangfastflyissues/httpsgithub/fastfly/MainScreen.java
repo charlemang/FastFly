@@ -14,7 +14,8 @@ public class MainScreen extends AppCompatActivity {
         setContentView(R.layout.activity_main_screen);
     }
 
-    public void sendAirport(View view) {
+    public void sendAirport(View view)
+    {
         Intent intent = new Intent(this, HomeScreen.class);
         EditText editText = findViewById(R.id.airport_name);
         String airportName = editText.getText().toString();

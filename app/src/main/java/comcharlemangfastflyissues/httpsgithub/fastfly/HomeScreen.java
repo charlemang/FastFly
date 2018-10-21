@@ -17,7 +17,8 @@ public class HomeScreen extends AppCompatActivity {
 
     }
 
-    public void getGateAndTime(View view) {
+    public void getGT(View view)
+    {
         Intent intent = getIntent();
         String airportName = intent.getStringExtra(MainScreen.EXTRA_AIRPORT);
 
